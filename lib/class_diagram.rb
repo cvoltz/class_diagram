@@ -1,5 +1,4 @@
-require "class_diagram/version"
+require_relative "class_diagram/version"
 
 module ClassDiagram
-  # Your code goes here...
 end

@@ -1,0 +1,4 @@
+require 'rubygems/package_task'
+
+Gem::PackageTask.new(eval(File.read('class_diagram.gemspec'))) do
+end

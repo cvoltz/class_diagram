@@ -1,0 +1,20 @@
+SOURCE = %w[bin lib]
+
+MetricFu.report_name = 'Class Diagram'
+
+MetricFu::Configuration.run do |config|
+  config.configure_formatter(:html)
+  config.configure_formatter(:yaml)
+
+  config.graphs -= [:rcov, :reek]
+
+  config.configure_metric(:hotspots) { |config| config.enabled = true }
+  config.configure_metric(:churn)    { |config| config.enabled = false }
+  config.configure_metric(:cane)     { |config| config.dirs_to_cane = SOURCE }
+  config.configure_metric(:flay)     { |config| config.dirs_to_flay = SOURCE }
+  config.configure_metric(:flog)     { |config| config.dirs_to_flog = SOURCE }
+  config.configure_metric(:reek)     { |config| config.dirs_to_reek = SOURCE }
+  config.configure_metric(:roodi)    { |config| config.dirs_to_roodi = SOURCE }
+  config.configure_metric(:saikuro)  { |config| config.input_directory = SOURCE }
+  config.configure_metric(:stats)    { |config| config.additional_app_directories = SOURCE }
+end

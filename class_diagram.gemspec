@@ -24,7 +24,11 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'aruba'
   spec.add_development_dependency 'cucumber', '~> 1.3'
+  spec.add_development_dependency 'metric_fu'
   spec.add_development_dependency 'pry'
   spec.add_development_dependency 'rspec', '~> 3.1'
   spec.add_development_dependency 'rspec-expectations', '~> 3.1'
+  spec.add_development_dependency 'simplecov'
+  spec.add_development_dependency 'simplecov-html'
+  spec.add_development_dependency 'simplecov-rcov'
 end

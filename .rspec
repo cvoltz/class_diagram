@@ -1,2 +1,8 @@
+<%
+  $build_artifacts ||= ENV['BUILD_ARTIFACTS'] || 'tmp/build'
+%>
+--format documentation --out <%= $build_artifacts %>/specs.txt
+--format html          --out <%= $build_artifacts %>/specs.html
 --color
+--format documentation
 --require spec_helper
